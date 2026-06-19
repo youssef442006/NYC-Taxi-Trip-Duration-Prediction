@@ -168,9 +168,8 @@ def load_csv_profile():
 
 
 META          = load_metadata()
-MODELS_DIR    = os.path.join(BASE_DIR, "models")
-SCALER_PATH   = os.path.join(MODELS_DIR, os.path.basename(META.get("scaler_file",   "feature_scaler.pkl")))
-FEATURES_PATH = os.path.join(MODELS_DIR, os.path.basename(META.get("features_file", "selected_features.pkl")))
+SCALER_PATH   = os.path.join(BASE_DIR, os.path.basename(META.get("scaler_file",   "feature_scaler.pkl")))
+FEATURES_PATH = os.path.join(BASE_DIR, os.path.basename(META.get("features_file", "selected_features.pkl")))
 FEATURES_FROM_META = META.get("selected_features") or []
 
 EXCLUDED_MODEL_FILES = {
@@ -184,9 +183,9 @@ EXCLUDED_MODEL_FILES = {
 
 @st.cache_data(show_spinner=False)
 def discover_models():
-    if not os.path.isdir(MODELS_DIR):
+    if not os.path.isdir(BASE_DIR):
         return []
-    out = [f for f in os.listdir(MODELS_DIR)
+    out = [f for f in os.listdir(BASE_DIR)
            if f.lower().endswith(".pkl") and f.lower() not in EXCLUDED_MODEL_FILES]
     out.sort()
     return out
@@ -518,7 +517,7 @@ if st.button("🔮  Predict Trip Duration", type="primary", use_container_width=
         st.error("❌ No prediction model available.")
         st.stop()
 
-    model   = load_object(os.path.join(MODELS_DIR, selected_model_file))
+    model   = load_object(os.path.join(BASE_DIR, selected_model_file))
     scaler  = load_object(SCALER_PATH)
     scaler  = scaler if is_valid_scaler(scaler) else None
     columns = training_feature_columns()
