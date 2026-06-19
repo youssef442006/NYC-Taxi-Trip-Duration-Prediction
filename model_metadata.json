@@ -21,51 +21,51 @@
     "dropoff_longitude"
   ],
   "metrics": {
-    "MAE_seconds": 196.37534052024307,
-    "MAE_minutes": 3.272922342004051,
-    "R2": 0.7642782715992081,
-    "RMSE_seconds": 317.62781315733264
+    "MAE_seconds": 195.43030252174304,
+    "MAE_minutes": 3.2571717086957173,
+    "R2": 0.7661887834206911,
+    "RMSE_seconds": 316.3380163093223
   },
   "all_models_performance": [
     {
       "Rank": 1,
       "Model": "GBM Tuned",
-      "MAE (seconds)": 196.3753,
-      "MAE (minutes)": 3.2729,
-      "RMSE (seconds)": 317.6278,
-      "R\u00b2": 0.7643
+      "MAE (seconds)": 195.4303,
+      "MAE (minutes)": 3.2572,
+      "RMSE (seconds)": 316.338,
+      "R\u00b2": 0.7662
     },
     {
       "Rank": 2,
       "Model": "RF Tuned",
-      "MAE (seconds)": 199.8167,
-      "MAE (minutes)": 3.3303,
-      "RMSE (seconds)": 321.3615,
-      "R\u00b2": 0.7587
+      "MAE (seconds)": 199.7617,
+      "MAE (minutes)": 3.3294,
+      "RMSE (seconds)": 321.1244,
+      "R\u00b2": 0.7591
     },
     {
       "Rank": 3,
       "Model": "Gradient Boosting",
-      "MAE (seconds)": 202.2925,
-      "MAE (minutes)": 3.3715,
-      "RMSE (seconds)": 327.5538,
-      "R\u00b2": 0.7493
+      "MAE (seconds)": 202.0707,
+      "MAE (minutes)": 3.3678,
+      "RMSE (seconds)": 327.2209,
+      "R\u00b2": 0.7498
     },
     {
       "Rank": 4,
       "Model": "Random Forest",
-      "MAE (seconds)": 203.401,
-      "MAE (minutes)": 3.39,
-      "RMSE (seconds)": 330.8508,
-      "R\u00b2": 0.7442
+      "MAE (seconds)": 204.0516,
+      "MAE (minutes)": 3.4009,
+      "RMSE (seconds)": 335.9105,
+      "R\u00b2": 0.7364
     },
     {
       "Rank": 5,
       "Model": "Ridge",
-      "MAE (seconds)": 470.9712,
-      "MAE (minutes)": 7.8495,
-      "RMSE (seconds)": 2057.6592,
-      "R\u00b2": -8.8926
+      "MAE (seconds)": 471.1979,
+      "MAE (minutes)": 7.8533,
+      "RMSE (seconds)": 2045.1264,
+      "R\u00b2": -8.7724
     }
   ],
   "training_data_info": {
